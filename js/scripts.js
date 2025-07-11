@@ -118,3 +118,101 @@ function initLazyLoading() {
 
 // Inicializar lazy loading
 document.addEventListener('DOMContentLoaded', initLazyLoading);
+
+// JavaScript para el menú header
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // Función para toggle del menú móvil
+    function toggleMobileMenu() {
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuToggle = document.querySelector('.menu-toggle');
+        
+        if (mobileMenu && menuToggle) {
+            mobileMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        }
+    }
+    
+    // Hacer la función global para que funcione con onclick
+    window.toggleMobileMenu = toggleMobileMenu;
+    
+    // Manejo de dropdowns en desktop
+    const dropdowns = document.querySelectorAll('.dropdown');
+    
+    dropdowns.forEach(dropdown => {
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        const content = dropdown.querySelector('.dropdown-content');
+        
+        if (toggle && content) {
+            // Para mobile, usar click
+            toggle.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                    
+                    // Cerrar otros dropdowns
+                    dropdowns.forEach(otherDropdown => {
+                        if (otherDropdown !== dropdown) {
+                            otherDropdown.classList.remove('active');
+                        }
+                    });
+                }
+            });
+        }
+    });
+    
+    // Cerrar menú móvil al hacer click fuera
+    document.addEventListener('click', function(e) {
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuToggle = document.querySelector('.menu-toggle');
+        const header = document.querySelector('header');
+        
+        if (mobileMenu && menuToggle && header) {
+            if (!header.contains(e.target) && mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
+        }
+    });
+    
+    // Cerrar menú móvil al redimensionar la ventana
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuToggle = document.querySelector('.menu-toggle');
+            
+            if (mobileMenu && menuToggle) {
+                mobileMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
+            
+            // Cerrar todos los dropdowns
+            dropdowns.forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+        }
+    });
+    
+    // Cerrar dropdowns al hacer click fuera (solo en mobile)
+    document.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+            const isDropdownClick = e.target.closest('.dropdown');
+            
+            if (!isDropdownClick) {
+                dropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            }
+        }
+    });
+});
+
+// Función adicional para smooth scroll (opcional)
+function smoothScroll(target) {
+    const element = document.querySelector(target);
+    if (element) {
+        element.scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+}

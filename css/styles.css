@@ -1,5 +1,5 @@
-/* styles.css - Diseño y Programación Web mejorado */
-@import url('https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap');
+/* styles.css - Header corregido y mejorado */
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600;700&display=swap');
 
 :root {
   --azul: #1e3a8a;
@@ -11,15 +11,21 @@
   --gris: #e0e0e0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background-color: var(--crema);
   color: var(--negro);
 }
 
-/* Header mejorado */
+/* ===========================================
+   HEADER PRINCIPAL
+   ========================================== */
 header {
   display: flex;
   justify-content: space-between;
@@ -32,11 +38,32 @@ header {
   z-index: 1000;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   margin-bottom: 0;
+  min-height: 70px;
+}
+
+/* Logo */
+.logo {
+  flex-shrink: 0;
 }
 
 .logo img {
   height: 45px;
+  width: auto;
   filter: brightness(1.1);
+  display: block;
+}
+
+.logo a {
+  display: block;
+  text-decoration: none;
+}
+
+/* ===========================================
+   NAVEGACIÓN PRINCIPAL
+   ========================================== */
+nav {
+  display: flex;
+  align-items: center;
 }
 
 nav ul {
@@ -45,6 +72,11 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  align-items: center;
+}
+
+nav ul li {
+  position: relative;
 }
 
 nav ul li a {
@@ -54,6 +86,10 @@ nav ul li a {
   padding: 0.5rem 1rem;
   border-radius: 6px;
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
 }
 
 nav ul li a:hover {
@@ -62,57 +98,43 @@ nav ul li a:hover {
   transform: translateY(-2px);
 }
 
-/* ===========================================
-   ESTILOS PARA MENÚ DESPLEGABLE
-   ========================================== */
-
-/* Contenedor del menú desplegable */
-.dropdown {
-  position: relative;
-  display: inline-block;
+nav ul li a i {
+  font-size: 0.9rem;
+  min-width: 16px;
 }
 
-/* Botón del menú desplegable */
+/* ===========================================
+   MENÚ DESPLEGABLE (DROPDOWN)
+   ========================================== */
+.dropdown {
+  position: relative;
+}
+
 .dropdown-toggle {
-  text-decoration: none;
-  color: var(--blanco);
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
   cursor: pointer;
   position: relative;
 }
 
-/* Icono de flecha para el dropdown */
+/* Flecha del dropdown */
 .dropdown-toggle::after {
   content: "▼";
-  font-size: 0.8rem;
+  font-size: 0.7rem;
+  margin-left: 0.3rem;
   transition: transform 0.3s ease;
 }
 
-/* Rotar flecha cuando está abierto */
+.dropdown:hover .dropdown-toggle::after,
 .dropdown.active .dropdown-toggle::after {
   transform: rotate(180deg);
 }
 
-/* Hover del botón */
-.dropdown-toggle:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: var(--naranja);
-  transform: translateY(-2px);
-}
-
-/* Contenido del menú desplegable */
+/* Contenido del dropdown */
 .dropdown-content {
   position: absolute;
   top: 100%;
   left: 0;
   background: linear-gradient(135deg, #1f2937, #111827);
-  min-width: 200px;
+  min-width: 220px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   opacity: 0;
@@ -122,9 +144,10 @@ nav ul li a:hover {
   z-index: 1001;
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
+  padding: 0.5rem 0;
 }
 
-/* Mostrar menú desplegable */
+/* Mostrar dropdown */
 .dropdown:hover .dropdown-content,
 .dropdown.active .dropdown-content {
   opacity: 1;
@@ -132,40 +155,39 @@ nav ul li a:hover {
   transform: translateY(0);
 }
 
-/* Enlaces del menú desplegable */
+/* Enlaces del dropdown */
 .dropdown-content a {
   color: var(--blanco);
   padding: 0.75rem 1.2rem;
   text-decoration: none;
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   transition: all 0.3s ease;
-  border-radius: 6px;
-  margin: 0.2rem 0.5rem;
   font-size: 0.9rem;
+  border-radius: 0;
 }
 
-/* Hover de los enlaces */
 .dropdown-content a:hover {
   background: linear-gradient(135deg, var(--azul), var(--morado));
   color: var(--blanco);
   transform: translateX(5px);
 }
 
-/* Separador en el menú desplegable */
-.dropdown-divider {
-  height: 1px;
-  background: rgba(255, 255, 255, 0.1);
-  margin: 0.5rem 0;
-}
-
-/* Menú desplegable con iconos */
 .dropdown-content a i {
   margin-right: 0.5rem;
   width: 16px;
   text-align: center;
 }
 
-/* Variante de menú desplegable hacia la derecha */
+/* Separador */
+.dropdown-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0.5rem 0;
+}
+
+/* Dropdown hacia la derecha */
 .dropdown-right .dropdown-content {
   left: auto;
   right: 0;
@@ -174,8 +196,6 @@ nav ul li a:hover {
 /* ===========================================
    MENÚ MÓVIL HAMBURGUESA
    ========================================== */
-
-/* Botón hamburguesa (oculto por defecto) */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -184,6 +204,7 @@ nav ul li a:hover {
   background: none;
   border: none;
   gap: 3px;
+  order: 3;
 }
 
 .menu-toggle span {
@@ -192,9 +213,10 @@ nav ul li a:hover {
   background: var(--blanco);
   border-radius: 2px;
   transition: all 0.3s ease;
+  display: block;
 }
 
-/* Animación del botón hamburguesa */
+/* Animación hamburguesa */
 .menu-toggle.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -220,6 +242,7 @@ nav ul li a:hover {
   transform: translateY(-10px);
   transition: all 0.3s ease;
   border-radius: 0 0 8px 8px;
+  z-index: 999;
 }
 
 .mobile-menu.active {
@@ -276,7 +299,69 @@ nav ul li a:hover {
 }
 
 /* ===========================================
-   CONTINÚA CON EL RESTO DE ESTILOS ORIGINALES
+   RESPONSIVE DESIGN
+   ========================================== */
+@media (max-width: 1024px) {
+  header {
+    padding: 0.8rem 1.5rem;
+  }
+  
+  nav ul {
+    gap: 1rem;
+  }
+  
+  nav ul li a {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 1rem;
+    position: relative;
+  }
+
+  /* Mostrar botón hamburguesa */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Ocultar navegación principal */
+  nav ul {
+    display: none;
+  }
+
+  /* Ajustar logo */
+  .logo img {
+    height: 40px;
+  }
+  
+  /* Ajustar mobile menu */
+  .mobile-menu {
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 0.8rem;
+  }
+  
+  .logo img {
+    height: 35px;
+  }
+  
+  .menu-toggle span {
+    width: 20px;
+    height: 2px;
+  }
+}
+
+/* ===========================================
+  CONTINÚA CON EL RESTO DE ESTILOS ORIGINALES
    ========================================== */
 
 /* Slider mejorado - pegado al header y bordes */
