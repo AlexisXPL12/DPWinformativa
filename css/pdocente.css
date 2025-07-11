@@ -1,4 +1,23 @@
-/* Breadcrumb - Estilos mejorados manteniendo simplicidad */
+
+:root {
+    /* Colores base */
+    --blanco: #ffffff;
+    --negro: #000000;
+    --azul: #2563eb;            /* Azul primario */
+    --naranja: #f59e0b;         /* Naranja vibrante */
+    --gris-claro: #f1f5f9;      /* Fondo claro */
+    --gris-medio: #6b7280;      /* Texto medio/gris neutro */
+    --gris-oscuro: #1f2937;     /* Texto oscuro/títulos */
+
+    /* Gradientes */
+    --gradiente-azul: linear-gradient(90deg, #3b82f6, #2563eb);
+    --gradiente-naranja: linear-gradient(90deg, #fbbf24, #f59e0b);
+    --gradiente-hero: linear-gradient(120deg, #2563eb 0%, #1d4ed8 100%);
+
+    /* Sombras */
+    --sombra-media: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --sombra-intensa: 0 8px 24px rgba(0, 0, 0, 0.15);
+}/* Breadcrumb - Estilos mejorados manteniendo simplicidad */
 .breadcrumb {
     background: linear-gradient(135deg, var(--gris-claro), #e2e8f0);
     padding: 1rem 0;
