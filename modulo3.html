@@ -5,9 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Presentación de la Carrera - Diseño y Programación Web</title>
+    <title>Diseño y Programación Web</title>
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/campo.css" />
+    <link rel="stylesheet" href="css/m3.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script src="js/scripts.js" defer></script>
@@ -134,40 +134,11 @@
                 </li>
                 <!-- Menú desplegable ACADÉMICO -->
                 <li class="dropdown">
-                    <a href="#academico" class="dropdown-toggle"><i class="fa-solid fa-graduation-cap"></i>
-                        Académico</a>
+                    <a href="#" class="dropdown-toggle" onclick="toggleDropdown(this)">Académico</a>
                     <div class="dropdown-content">
-                        <a href="modulo1.html"><i class="fas fa-layer-group"></i> Módulos I</a>
-                        <a href="modulo2.html"><i class="fas fa-layer-group"></i> Módulos II</a>
-                        <a href="modulo3.html"><i class="fas fa-layer-group"></i> Módulos III</a>
-                        <a href="plan-estudios.html"><i class="fas fa-book-open"></i> Plan de Estudios</a>
+                        <a href="modulos-profesionales.html"><i class="fas fa-book-open"></i> Módulos Profesionales</a>
                         <a href="perfil-profesional.html"><i class="fas fa-user-graduate"></i> Perfil Profesional</a>
-                        <a href="horario.html"><i class="fas fa-calendar"></i> Cronograma</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="infraestructura.html" class="dropdown-toggle"><i class="fas fa-building"></i>
-                        Infraestructura</a>
-                    <div class="dropdown-content">
-                        <a href="laboratorios.html"><i class="fas fa-laptop-code"></i> Laboratorios</a>
-                        <a href="materiales.html"><i class="fas fa-tools"></i> Materiales</a>
-                    </div>
-                </li>
-                <!-- Menú desplegable Admision Y Matricula -->
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle">
-                        <i class="fa-solid fa-clipboard"></i></i>Admisión y Matricula
-                    </a>
-                    <div class="dropdown-content">
-                        <a href="admision.html">
-                            <i class="fas fa-layer-group"></i>Admisión 2025
-                        </a>
-                        <a href="becas.html">
-                            <i class="fas fa-layer-group"></i>Becas y Créditos
-                        </a>
-                        <a href="matricula.html">
-                            <i class="fas fa-layer-group"></i>Matricula
-                        </a>
+                        <a href="horario-clases.html"><i class="fas fa-calendar"></i> Horario de Clases</a>
                     </div>
                 </li>
                 <!-- Menú desplegable INFRAESTRUCTURA -->
@@ -197,9 +168,9 @@
                 <nav>
                     <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
                     <span class="separator">/</span>
-                    <a href="#">Nosotros</a>
+                    <a href="modulos.html">Módulos Profesionales</a>
                     <span class="separator">/</span>
-                    <span class="current">Campo Laboral</span>
+                    <span class="current">Módulo III</span>
                 </nav>
             </div>
         </section>
@@ -208,118 +179,135 @@
         <section class="hero-page" data-aos="fade-up">
             <div class="container">
                 <div class="hero-content">
-                    <h1><i class="fas fa-briefcase"></i> Campo Laboral</h1>
-                    <p>Explora las oportunidades y áreas de especialización en Diseño y Programación Web</p>
+                    <h1><i class="fas fa-network-wired"></i> Módulo III</h1>
+                    <p>Diseño de Servicios Web</p>
                 </div>
             </div>
         </section>
 
-        <!-- Campo Laboral -->
-        <div class="campo-laboral">
-            <div class="campo-grid">
-                <div class="campo-card">
-                    <div class="campo-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h3>Empresas Tecnológicas</h3>
-                    <p>Desarrollador web en startups y empresas de tecnología, trabajando en proyectos
-                        innovadores y disruptivos.</p>
+        <!-- Módulo III Content -->
+        <section class="modulo-content">
+            <p>Diseñar la presentación, animación, organización y navegación de los contenidos y servicios web, de
+                acuerdo a las demandas del negocio, buenas prácticas de diseño, técnicas de diseño web, usabilidad y
+                experiencia del usuario objetivo.</p>
+
+            <div class="semestres-container">
+                <!-- Semestre V -->
+                <div class="semestre-info">
+                    <h3>Semestre V</h3>
+                    <table class="horario-table">
+                        <thead>
+                            <tr>
+                                <th>Unidad Didáctica</th>
+                                <th>Créditos</th>
+                                <th>Horas Semestrales</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Programación de aplicaciones móviles</td>
+                                <td>5</td>
+                                <td>128</td>
+                            </tr>
+                            <tr>
+                                <td>Marketing digital</td>
+                                <td>3</td>
+                                <td>64</td>
+                            </tr>
+                            <tr>
+                                <td>Diseño de soluciones web</td>
+                                <td>3</td>
+                                <td>64</td>
+                            </tr>
+                            <tr>
+                                <td>Gestión y administración de sitios web</td>
+                                <td>2</td>
+                                <td>48</td>
+                            </tr>
+                            <tr>
+                                <td>Diagramación digital</td>
+                                <td>3</td>
+                                <td>80</td>
+                            </tr>
+                            <tr>
+                                <td>Solución de problemas</td>
+                                <td>2</td>
+                                <td>48</td>
+                            </tr>
+                            <tr>
+                                <td>Oportunidades de negocios</td>
+                                <td>2</td>
+                                <td>48</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="campo-card">
-                    <div class="campo-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h3>Agencias Digitales</h3>
-                    <p>Diseñador y desarrollador web en agencias de marketing digital y publicidad.</p>
-                </div>
-                <div class="campo-card">
-                    <div class="campo-icon">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
-                    <h3>Freelancer</h3>
-                    <p>Profesional independiente ofreciendo servicios de desarrollo web a clientes nacionales e
-                        internacionales.</p>
-                </div>
-                <div class="campo-card">
-                    <div class="campo-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3>Emprendimiento</h3>
-                    <p>Creación de tu propia empresa de desarrollo web o productos digitales innovadores.</p>
+
+                <!-- Semestre VI -->
+                <div class="semestre-info">
+                    <h3>Semestre VI</h3>
+                    <table class="horario-table">
+                        <thead>
+                            <tr>
+                                <th>Unidad Didáctica</th>
+                                <th>Créditos</th>
+                                <th>Horas Semestrales</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Plataforma de servicios web</td>
+                                <td>3</td>
+                                <td>80</td>
+                            </tr>
+                            <tr>
+                                <td>Ilustración y gráfica digital</td>
+                                <td>5</td>
+                                <td>128</td>
+                            </tr>
+                            <tr>
+                                <td>Administración de servidores web</td>
+                                <td>4</td>
+                                <td>96</td>
+                            </tr>
+                            <tr>
+                                <td>Comercio electrónico</td>
+                                <td>5</td>
+                                <td>128</td>
+                            </tr>
+                            <tr>
+                                <td>Plan de negocios</td>
+                                <td>2</td>
+                                <td>48</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-        </div>
 
-        <!-- Perfil del Estudiante -->
-        <section class="perfil-estudiante">
-            <div class="row">
-                <div class="col-md-6">
-                    <h3>Perfil del Estudiante Ideal</h3>
-                    <div class="perfil-content">
-                        <div class="perfil-item">
-                            <i class="fas fa-lightbulb"></i>
-                            <div>
-                                <h4>Creatividad</h4>
-                                <p>Capacidad para generar ideas innovadoras y soluciones creativas.</p>
-                            </div>
-                        </div>
-                        <div class="perfil-item">
-                            <i class="fas fa-brain"></i>
-                            <div>
-                                <h4>Pensamiento Lógico</h4>
-                                <p>Habilidad para resolver problemas de manera estructurada y analítica.</p>
-                            </div>
-                        </div>
-                        <div class="perfil-item">
-                            <i class="fas fa-eye"></i>
-                            <div>
-                                <h4>Sentido Estético</h4>
-                                <p>Apreciación por el diseño visual y la estética digital.</p>
-                            </div>
-                        </div>
-                        <div class="perfil-item">
-                            <i class="fas fa-rocket"></i>
-                            <div>
-                                <h4>Adaptabilidad</h4>
-                                <p>Disposición para aprender nuevas tecnologías constantemente.</p>
-                            </div>
-                        </div>
+            <div class="capacidades-tecnicas">
+                <h3>Capacidades Técnicas Desarrolladas</h3>
+                <div class="capacidades-grid">
+                    <div class="capacidades-column">
+                        <ul>
+                            <li>Desarrollo de aplicaciones móviles.</li>
+                            <li>Estrategias de marketing digital.</li>
+                            <li>Diseño de soluciones web avanzadas.</li>
+                            <li>Gestión y administración de sitios web.</li>
+                        </ul>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <h3>Oportunidades Laborales</h3>
-                    <div class="oportunidades-list">
-                        <div class="oportunidad-item">
-                            <i class="fas fa-building"></i>
-                            <span>Desarrollador Frontend en empresas tech</span>
-                        </div>
-                        <div class="oportunidad-item">
-                            <i class="fas fa-palette"></i>
-                            <span>Diseñador UI/UX en agencias digitales</span>
-                        </div>
-                        <div class="oportunidad-item">
-                            <i class="fas fa-laptop"></i>
-                            <span>Freelancer independiente</span>
-                        </div>
-                        <div class="oportunidad-item">
-                            <i class="fas fa-store"></i>
-                            <span>Emprendedor en startup tecnológica</span>
-                        </div>
-                        <div class="oportunidad-item">
-                            <i class="fas fa-globe"></i>
-                            <span>Consultor en transformación digital</span>
-                        </div>
-                        <div class="oportunidad-item">
-                            <i class="fas fa-chart-line"></i>
-                            <span>Especialista en marketing digital</span>
-                        </div>
+                    <div class="capacidades-column">
+                        <ul>
+                            <li>Habilidades en diagramación digital.</li>
+                            <li>Solución de problemas técnicos.</li>
+                            <li>Conocimiento en comercio electrónico.</li>
+                            <li>Desarrollo de planes de negocios.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-
-
     <footer>
         <div class="footer-logo" data-aos="fade-right">
             <img src="img/logo-footer.png" alt="Logo" />

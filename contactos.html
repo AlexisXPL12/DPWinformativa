@@ -5,9 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Presentación de la Carrera - Diseño y Programación Web</title>
+    <title>Diseño y Programación Web</title>
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/campo.css" />
+    <link rel="stylesheet" href="css/pdocente.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script src="js/scripts.js" defer></script>
@@ -82,19 +82,19 @@
                     </div>
                 </li>
                 <!-- Menú desplegable INFRAESTRUCTURA -->
-                <li class="dropdown">
-                    <a href="#infraestructura" class="dropdown-toggle">
-                        <i class="fas fa-building"></i>Infraestructura
+            <li class="dropdown">
+                <a href="#infraestructura" class="dropdown-toggle">
+                    <i class="fas fa-building"></i>Infraestructura
+                </a>
+                <div class="dropdown-content">
+                    <a href="laboratorios.html">
+                        <i class="fas fa-laptop-code"></i>Laboratorios
                     </a>
-                    <div class="dropdown-content">
-                        <a href="laboratorios.html">
-                            <i class="fas fa-laptop-code"></i>Laboratorios
-                        </a>
-                        <a href="materiales.html">
-                            <i class="fas fa-tools"></i>Materiales
-                        </a>
-                    </div>
-                </li>
+                    <a href="materiales.html">
+                        <i class="fas fa-tools"></i>Materiales
+                    </a>
+                </div>
+            </li>
                 <!-- Menú desplegable RECURSOS -->
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle"><i class="fa-solid fa-book-open"></i> Recursos</a>
@@ -190,136 +190,6 @@
             </ul>
         </div>
     </header>
-    <main>
-        <!-- Breadcrumb -->
-        <section class="breadcrumb" data-aos="fade-down">
-            <div class="container">
-                <nav>
-                    <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
-                    <span class="separator">/</span>
-                    <a href="#">Nosotros</a>
-                    <span class="separator">/</span>
-                    <span class="current">Campo Laboral</span>
-                </nav>
-            </div>
-        </section>
-
-        <!-- Hero Section -->
-        <section class="hero-page" data-aos="fade-up">
-            <div class="container">
-                <div class="hero-content">
-                    <h1><i class="fas fa-briefcase"></i> Campo Laboral</h1>
-                    <p>Explora las oportunidades y áreas de especialización en Diseño y Programación Web</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Campo Laboral -->
-        <div class="campo-laboral">
-            <div class="campo-grid">
-                <div class="campo-card">
-                    <div class="campo-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h3>Empresas Tecnológicas</h3>
-                    <p>Desarrollador web en startups y empresas de tecnología, trabajando en proyectos
-                        innovadores y disruptivos.</p>
-                </div>
-                <div class="campo-card">
-                    <div class="campo-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h3>Agencias Digitales</h3>
-                    <p>Diseñador y desarrollador web en agencias de marketing digital y publicidad.</p>
-                </div>
-                <div class="campo-card">
-                    <div class="campo-icon">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
-                    <h3>Freelancer</h3>
-                    <p>Profesional independiente ofreciendo servicios de desarrollo web a clientes nacionales e
-                        internacionales.</p>
-                </div>
-                <div class="campo-card">
-                    <div class="campo-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3>Emprendimiento</h3>
-                    <p>Creación de tu propia empresa de desarrollo web o productos digitales innovadores.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Perfil del Estudiante -->
-        <section class="perfil-estudiante">
-            <div class="row">
-                <div class="col-md-6">
-                    <h3>Perfil del Estudiante Ideal</h3>
-                    <div class="perfil-content">
-                        <div class="perfil-item">
-                            <i class="fas fa-lightbulb"></i>
-                            <div>
-                                <h4>Creatividad</h4>
-                                <p>Capacidad para generar ideas innovadoras y soluciones creativas.</p>
-                            </div>
-                        </div>
-                        <div class="perfil-item">
-                            <i class="fas fa-brain"></i>
-                            <div>
-                                <h4>Pensamiento Lógico</h4>
-                                <p>Habilidad para resolver problemas de manera estructurada y analítica.</p>
-                            </div>
-                        </div>
-                        <div class="perfil-item">
-                            <i class="fas fa-eye"></i>
-                            <div>
-                                <h4>Sentido Estético</h4>
-                                <p>Apreciación por el diseño visual y la estética digital.</p>
-                            </div>
-                        </div>
-                        <div class="perfil-item">
-                            <i class="fas fa-rocket"></i>
-                            <div>
-                                <h4>Adaptabilidad</h4>
-                                <p>Disposición para aprender nuevas tecnologías constantemente.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <h3>Oportunidades Laborales</h3>
-                    <div class="oportunidades-list">
-                        <div class="oportunidad-item">
-                            <i class="fas fa-building"></i>
-                            <span>Desarrollador Frontend en empresas tech</span>
-                        </div>
-                        <div class="oportunidad-item">
-                            <i class="fas fa-palette"></i>
-                            <span>Diseñador UI/UX en agencias digitales</span>
-                        </div>
-                        <div class="oportunidad-item">
-                            <i class="fas fa-laptop"></i>
-                            <span>Freelancer independiente</span>
-                        </div>
-                        <div class="oportunidad-item">
-                            <i class="fas fa-store"></i>
-                            <span>Emprendedor en startup tecnológica</span>
-                        </div>
-                        <div class="oportunidad-item">
-                            <i class="fas fa-globe"></i>
-                            <span>Consultor en transformación digital</span>
-                        </div>
-                        <div class="oportunidad-item">
-                            <i class="fas fa-chart-line"></i>
-                            <span>Especialista en marketing digital</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-
     <footer>
         <div class="footer-logo" data-aos="fade-right">
             <img src="img/logo-footer.png" alt="Logo" />

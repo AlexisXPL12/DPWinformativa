@@ -5,9 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Presentación de la Carrera - Diseño y Programación Web</title>
+    <title>Diseño y Programación Web</title>
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/campo.css" />
+    <link rel="stylesheet" href="css/7.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script src="js/scripts.js" defer></script>
@@ -59,7 +59,7 @@
                         <a href="perfil-profesional.html">
                             <i class="fas fa-user-graduate"></i>Perfil Profesional
                         </a>
-                        <a href="horario.html">
+                        <a href="cronograma.html">
                             <i class="fas fa-calendar"></i>Cronograma
                         </a>
                     </div>
@@ -172,7 +172,17 @@
                 </li>
                 <!-- Menú desplegable INFRAESTRUCTURA -->
                 <li class="dropdown">
-                    <a href="infraestructura/infraestructura.html">Infraestructura</a>
+                    <a href="#infraestructura" class="dropdown-toggle">
+                        <i class="fas fa-building"></i>Infraestructura
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="laboratorios.html">
+                            <i class="fas fa-laptop-code"></i>Laboratorios
+                        </a>
+                        <a href="materiales.html">
+                            <i class="fas fa-tools"></i>Materiales
+                        </a>
+                    </div>
                 </li>
                 <!-- Menú desplegable RECURSOS -->
                 <li class="dropdown">
@@ -197,9 +207,9 @@
                 <nav>
                     <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
                     <span class="separator">/</span>
-                    <a href="#">Nosotros</a>
+                    <a href="#">Infraestructura</a>
                     <span class="separator">/</span>
-                    <span class="current">Campo Laboral</span>
+                    <span class="current">Materiales</span>
                 </nav>
             </div>
         </section>
@@ -208,118 +218,148 @@
         <section class="hero-page" data-aos="fade-up">
             <div class="container">
                 <div class="hero-content">
-                    <h1><i class="fas fa-briefcase"></i> Campo Laboral</h1>
-                    <p>Explora las oportunidades y áreas de especialización en Diseño y Programación Web</p>
+                    <h1><i class="fas fa-box-open"></i> Materiales</h1>
+                    <p>Descubre los materiales didácticos y tecnológicos disponibles para los estudiantes de Diseño y
+                        Programación Web en el IEST Público "HUANTA"</p>
                 </div>
             </div>
         </section>
+        <div class="container">
 
-        <!-- Campo Laboral -->
-        <div class="campo-laboral">
-            <div class="campo-grid">
-                <div class="campo-card">
-                    <div class="campo-icon">
-                        <i class="fas fa-building"></i>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-header">
+                        <div class="category-icon hardware-icon">🖥️</div>
+                        <h3 class="category-title">Hardware Informático</h3>
                     </div>
-                    <h3>Empresas Tecnológicas</h3>
-                    <p>Desarrollador web en startups y empresas de tecnología, trabajando en proyectos
-                        innovadores y disruptivos.</p>
+                    <div class="category-description">
+                        Equipos de computación de última generación para desarrollo y diseño profesional.
+                    </div>
+                    <ul class="materials-list">
+                        <li>Computadoras <span class="highlight">Lenovo i7</span> <span class="quantity">40
+                                unidades</span></li>
+                        <li>iMacs <span class="highlight">Core i7</span> <span class="quantity">30 unidades</span></li>
+                        <li>MacBook Pro <span class="quantity">15 unidades</span></li>
+                        <li>Memoria RAM <span class="highlight">16GB</span> por equipo</li>
+                        <li>Discos duros <span class="highlight">1TB HDD</span></li>
+                        <li>Tabletas Wacom para diseño</li>
+                    </ul>
                 </div>
-                <div class="campo-card">
-                    <div class="campo-icon">
-                        <i class="fas fa-palette"></i>
+
+                <div class="category-card">
+                    <div class="category-header">
+                        <div class="category-icon software-icon">💿</div>
+                        <h3 class="category-title">Software Especializado</h3>
                     </div>
-                    <h3>Agencias Digitales</h3>
-                    <p>Diseñador y desarrollador web en agencias de marketing digital y publicidad.</p>
+                    <div class="category-description">
+                        Suite completa de software profesional para desarrollo, diseño y productividad.
+                    </div>
+                    <ul class="materials-list">
+                        <li>Microsoft <span class="highlight">Office 2019</span></li>
+                        <li>VMware y VirtualBox</li>
+                        <li>Adobe <span class="highlight">Creative Suite</span></li>
+                        <li>CorelDraw Professional</li>
+                        <li>Blender 3D</li>
+                        <li>Kaspersky Security</li>
+                        <li>Windows/Ubuntu Server</li>
+                    </ul>
                 </div>
-                <div class="campo-card">
-                    <div class="campo-icon">
-                        <i class="fas fa-user-tie"></i>
+
+                <div class="category-card">
+                    <div class="category-header">
+                        <div class="category-icon audiovisual-icon">📹</div>
+                        <h3 class="category-title">Equipos Audiovisuales</h3>
                     </div>
-                    <h3>Freelancer</h3>
-                    <p>Profesional independiente ofreciendo servicios de desarrollo web a clientes nacionales e
-                        internacionales.</p>
+                    <div class="category-description">
+                        Tecnología multimedia avanzada para presentaciones y contenido interactivo.
+                    </div>
+                    <ul class="materials-list">
+                        <li>Proyectores <span class="highlight">Epson</span> alta resolución</li>
+                        <li>Pantallas interactivas <span class="highlight">SMART Board</span></li>
+                        <li>Cámaras <span class="highlight">Canon</span> profesionales</li>
+                        <li>Sistemas de sonido integrados</li>
+                        <li>Pantallas LED de gran formato</li>
+                        <li>Equipos de streaming</li>
+                    </ul>
                 </div>
-                <div class="campo-card">
-                    <div class="campo-icon">
-                        <i class="fas fa-rocket"></i>
+
+                <div class="category-card">
+                    <div class="category-header">
+                        <div class="category-icon networking-icon">🌐</div>
+                        <h3 class="category-title">Equipos de Red</h3>
                     </div>
-                    <h3>Emprendimiento</h3>
-                    <p>Creación de tu propia empresa de desarrollo web o productos digitales innovadores.</p>
+                    <div class="category-description">
+                        Infraestructura de red robusta para conectividad y comunicaciones avanzadas.
+                    </div>
+                    <ul class="materials-list">
+                        <li>Routers <span class="highlight">MikroTik</span> empresariales</li>
+                        <li>Switches <span class="highlight">Kipands</span></li>
+                        <li>Puntos de acceso WiFi 6</li>
+                        <li>Cables de red Cat 6A</li>
+                        <li>Paneles de conexiones</li>
+                        <li>Equipos de monitoreo de red</li>
+                    </ul>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-header">
+                        <div class="category-icon furniture-icon">🪑</div>
+                        <h3 class="category-title">Mobiliario Ergonómico</h3>
+                    </div>
+                    <div class="category-description">
+                        Muebles diseñados para optimizar el confort y la productividad en el aprendizaje.
+                    </div>
+                    <ul class="materials-list">
+                        <li>Escritorios <span class="highlight">ajustables</span></li>
+                        <li>Sillas ergonómicas</li>
+                        <li>Mesas colaborativas</li>
+                        <li>Estantes modulares</li>
+                        <li>Pizarras móviles</li>
+                        <li>Soportes para equipos</li>
+                    </ul>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-header">
+                        <div class="category-icon creative-icon">🎨</div>
+                        <h3 class="category-title">Herramientas Creativas</h3>
+                    </div>
+                    <div class="category-description">
+                        Equipos especializados para desarrollo creativo y prototipado rápido.
+                    </div>
+                    <ul class="materials-list">
+                        <li>Impresoras <span class="highlight">3D</span> profesionales</li>
+                        <li>Impresoras multifuncionales</li>
+                        <li>Escáneres de alta resolución</li>
+                        <li>Kits de electrónica</li>
+                        <li>Herramientas de prototipado</li>
+                        <li>Materiales para impresión 3D</li>
+                    </ul>
                 </div>
             </div>
         </div>
 
-        <!-- Perfil del Estudiante -->
-        <section class="perfil-estudiante">
-            <div class="row">
-                <div class="col-md-6">
-                    <h3>Perfil del Estudiante Ideal</h3>
-                    <div class="perfil-content">
-                        <div class="perfil-item">
-                            <i class="fas fa-lightbulb"></i>
-                            <div>
-                                <h4>Creatividad</h4>
-                                <p>Capacidad para generar ideas innovadoras y soluciones creativas.</p>
-                            </div>
-                        </div>
-                        <div class="perfil-item">
-                            <i class="fas fa-brain"></i>
-                            <div>
-                                <h4>Pensamiento Lógico</h4>
-                                <p>Habilidad para resolver problemas de manera estructurada y analítica.</p>
-                            </div>
-                        </div>
-                        <div class="perfil-item">
-                            <i class="fas fa-eye"></i>
-                            <div>
-                                <h4>Sentido Estético</h4>
-                                <p>Apreciación por el diseño visual y la estética digital.</p>
-                            </div>
-                        </div>
-                        <div class="perfil-item">
-                            <i class="fas fa-rocket"></i>
-                            <div>
-                                <h4>Adaptabilidad</h4>
-                                <p>Disposición para aprender nuevas tecnologías constantemente.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <h3>Oportunidades Laborales</h3>
-                    <div class="oportunidades-list">
-                        <div class="oportunidad-item">
-                            <i class="fas fa-building"></i>
-                            <span>Desarrollador Frontend en empresas tech</span>
-                        </div>
-                        <div class="oportunidad-item">
-                            <i class="fas fa-palette"></i>
-                            <span>Diseñador UI/UX en agencias digitales</span>
-                        </div>
-                        <div class="oportunidad-item">
-                            <i class="fas fa-laptop"></i>
-                            <span>Freelancer independiente</span>
-                        </div>
-                        <div class="oportunidad-item">
-                            <i class="fas fa-store"></i>
-                            <span>Emprendedor en startup tecnológica</span>
-                        </div>
-                        <div class="oportunidad-item">
-                            <i class="fas fa-globe"></i>
-                            <span>Consultor en transformación digital</span>
-                        </div>
-                        <div class="oportunidad-item">
-                            <i class="fas fa-chart-line"></i>
-                            <span>Especialista en marketing digital</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <script>
+            function showLaboratorios() {
+                // Aquí podrías implementar la navegación a la página de laboratorios
+                window.location.href = '#laboratorios';
+            }
+
+            function showMateriales() {
+                // Mantener en la página actual
+                document.querySelectorAll('.nav-button').forEach(btn => btn.classList.remove('active'));
+                event.target.classList.add('active');
+            }
+
+            // Animaciones adicionales
+            document.addEventListener('DOMContentLoaded', function () {
+                const cards = document.querySelectorAll('.category-card');
+                cards.forEach((card, index) => {
+                    card.style.animationDelay = `${index * 0.1}s`;
+                });
+            });
+        </script>
     </main>
-
-
     <footer>
         <div class="footer-logo" data-aos="fade-right">
             <img src="img/logo-footer.png" alt="Logo" />

@@ -173,157 +173,57 @@
         font-size: 1rem;
     }
 }
-
-/* Estilos mejorados para Áreas de Especialización */
-.areas-especializacion {
-    padding: 5rem 2rem;
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-    position: relative;
+/* Campo Laboral */
+.campo-laboral {
+    margin-bottom: 4rem;
 }
 
-.areas-especializacion::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('https://images.unsplash.com/photo-1556742504-16b083241fab?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-    opacity: 0.5;
-}
-
-.areas-especializacion h3 {
-    text-align: center;
-    margin-bottom: 3rem;
-    color: var(--gris-oscuro);
-    font-size: 2.5rem;
-    font-weight: 700;
-    position: relative;
-    z-index: 1;
-}
-
-.areas-especializacion h3::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background: var(--gradiente-naranja);
-    border-radius: 2px;
-}
-
-.areas-grid {
+.campo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    position: relative;
-    z-index: 1;
 }
 
-.area-card {
-    background: var(--blanco);
+.campo-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
+    backdrop-filter: blur(20px);
     border-radius: 20px;
-    box-shadow: var(--sombra-media);
     padding: 2rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.area-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 5px;
-    background: var(--gradiente-azul);
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-}
-
-.area-card:hover::before {
-    transform: translateX(0);
-}
-
-.area-card:hover {
+.campo-card:hover {
     transform: translateY(-8px);
-    box-shadow: var(--sombra-intensa);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
-.area-card:nth-child(1) .area-header i {
-    color: #ef4444;
-}
-
-.area-card:nth-child(2) .area-header i {
-    color: #3b82f6;
-}
-
-.area-card:nth-child(3) .area-header i {
-    color: #10b981;
-}
-
-.area-header {
+.campo-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
     display: flex;
     align-items: center;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid #f1f5f9;
-}
-
-.area-header i {
-    margin-right: 1rem;
+    justify-content: center;
     font-size: 2rem;
-    padding: 0.5rem;
-    background: rgba(59, 130, 246, 0.1);
-    border-radius: 10px;
-    transition: all 0.3s ease;
+    color: white;
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
 }
 
-.area-header h4 {
+.campo-card h3 {
     font-size: 1.5rem;
-    color: var(--gris-oscuro);
-    margin: 0;
-    font-weight: 600;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 1rem;
 }
 
-.area-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.area-card li {
-    padding: 0.8rem 0;
-    border-bottom: 1px solid #f1f5f9;
-    position: relative;
-    padding-left: 1.5rem;
-    color: var(--gris-medio);
-    transition: color 0.3s ease;
-}
-
-.area-card li:last-child {
-    border-bottom: none;
-}
-
-.area-card li::before {
-    content: '▶';
-    position: absolute;
-    left: 0;
-    color: var(--azul);
-    font-size: 0.8rem;
-    transition: transform 0.3s ease;
-}
-
-.area-card li:hover {
-    color: var(--gris-oscuro);
-}
-
-.area-card li:hover::before {
-    transform: translateX(3px);
+.campo-card p {
+    color: #64748b;
+    line-height: 1.6;
 }
 
 /* Placeholder para imágenes en áreas */

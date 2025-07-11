@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Diseño y Programación Web</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/4.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="js/scripts.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo Institucional" data-aos="fade-down" />
+            </a>
+        </div>
+        <!-- Botón hamburguesa para móvil -->
+        <button class="menu-toggle" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav data-aos="fade-left">
+            <ul>
+                <!-- Menú desplegable NOSOTROS -->
+                <li class="dropdown">
+                    <a href="#nosotros" class="dropdown-toggle"><i class="fa-solid fa-chalkboard-user"></i> Nosotros</a>
+                    <div class="dropdown-content">
+                        <a href="presentacion.html"><i class="fa-solid fa-chalkboard"></i> Presentación de la
+                            Carrera</a>
+                        <a href="campolaboral.html"><i class="fa-solid fa-briefcase"></i> Campo Laboral</a>
+                        <a href="planadocente.html"><i class="fas fa-users"></i> Plana Docente</a>
+                    </div>
+                </li>
+                <!-- Menú desplegable ACADÉMICO -->
+                <li class="dropdown">
+                    <a href="#academico" class="dropdown-toggle">
+                        <i class="fa-solid fa-graduation-cap"></i>Académico
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="modulo1.html">
+                            <i class="fas fa-layer-group"></i>Módulos I
+                        </a>
+                        <a href="modulo2.html">
+                            <i class="fas fa-layer-group"></i>Módulos II
+                        </a>
+                        <a href="modulo3.html">
+                            <i class="fas fa-layer-group"></i>Módulos III
+                        </a>
+                        <a href="plan-estudios.html">
+                            <i class="fas fa-book-open"></i>Plan de Estudios
+                        </a>
+                        <a href="perfil-profesional.html">
+                            <i class="fas fa-user-graduate"></i>Perfil Profesional
+                        </a>
+                        <a href="horario.html">
+                            <i class="fas fa-calendar"></i>Cronograma
+                        </a>
+                    </div>
+                </li>
+                <!-- Menú desplegable Admision Y Matricula -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        <i class="fa-solid fa-clipboard"></i></i>Admisión y Matricula
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="admision.html">
+                            <i class="fas fa-layer-group"></i>Admisión 2025
+                        </a>
+                        <a href="becas.html">
+                            <i class="fas fa-layer-group"></i>Becas y Créditos
+                        </a>
+                        <a href="matricula.html">
+                            <i class="fas fa-layer-group"></i>Matricula
+                        </a>
+                    </div>
+                </li>
+                <!-- Menú desplegable INFRAESTRUCTURA -->
+                <li class="dropdown">
+                    <a href="#infraestructura" class="dropdown-toggle">
+                        <i class="fas fa-building"></i>Infraestructura
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="laboratorios.html">
+                            <i class="fas fa-laptop-code"></i>Laboratorios
+                        </a>
+                        <a href="materiales.html">
+                            <i class="fas fa-tools"></i>Materiales
+                        </a>
+                    </div>
+                </li>
+                <!-- Menú desplegable RECURSOS -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle"><i class="fa-solid fa-book-open"></i> Recursos</a>
+                    <div class="dropdown-content">
+                        <a href="aula-virtual.html"><i class="fas fa-chalkboard-teacher"></i> Aula Virtual</a>
+                        <a href="biblioteca-virtual.html"><i class="fas fa-book"></i> Biblioteca</a>
+                        <a href="sispa.html"><i class="fas fa-cogs"></i> SISPA</a>
+                    </div>
+                </li>
+                <li><a class="dropdown-toggle" href="contactos.html"><i class="fa-solid fa-address-card"></i>
+                        Contacto</a></li>
+                <!-- Menú desplegable MÁS -->
+                <li class="dropdown dropdown-right">
+                    <a href="#mas" class="dropdown-toggle"><i class="fa-solid fa-notes-medical"></i> Más</a>
+                    <div class="dropdown-content">
+                        <a href="eventos.html"><i class="fas fa-calendar-alt"></i> Eventos</a>
+                        <a href="noticias.html"><i class="fas fa-newspaper"></i> Noticias</a>
+                        <a href="galeria.html"><i class="fas fa-images"></i> Galería</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="convenios.html"><i class="fas fa-handshake"></i> Convenios</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!-- Menú móvil -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <!-- Menú desplegable NOSOTROS -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" onclick="toggleDropdown(this)">Nosotros</a>
+                    <div class="dropdown-content">
+                        <a href="presentacion-carrera.html"><i class="fas fa-presentation"></i> Presentación de la
+                            Carrera</a>
+                        <a href="campo-laboral.html"><i class="fas fa-eye"></i> Campo Laboral</a>
+                        <a href="plana-docente.html"><i class="fas fa-users"></i> Plana Docente</a>
+                    </div>
+                </li>
+                <!-- Menú desplegable ACADÉMICO -->
+                <li class="dropdown">
+                    <a href="#academico" class="dropdown-toggle"><i class="fa-solid fa-graduation-cap"></i>
+                        Académico</a>
+                    <div class="dropdown-content">
+                        <a href="modulo1.html"><i class="fas fa-layer-group"></i> Módulos I</a>
+                        <a href="modulo2.html"><i class="fas fa-layer-group"></i> Módulos II</a>
+                        <a href="modulo3.html"><i class="fas fa-layer-group"></i> Módulos III</a>
+                        <a href="plan-estudios.html"><i class="fas fa-book-open"></i> Plan de Estudios</a>
+                        <a href="perfil-profesional.html"><i class="fas fa-user-graduate"></i> Perfil Profesional</a>
+                        <a href="horario.html"><i class="fas fa-calendar"></i> Cronograma</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="infraestructura.html" class="dropdown-toggle"><i class="fas fa-building"></i>
+                        Infraestructura</a>
+                    <div class="dropdown-content">
+                        <a href="laboratorios.html"><i class="fas fa-laptop-code"></i> Laboratorios</a>
+                        <a href="materiales.html"><i class="fas fa-tools"></i> Materiales</a>
+                    </div>
+                </li>
+                <!-- Menú desplegable Admision Y Matricula -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        <i class="fa-solid fa-clipboard"></i></i>Admisión y Matricula
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="admision.html">
+                            <i class="fas fa-layer-group"></i>Admisión 2025
+                        </a>
+                        <a href="becas.html">
+                            <i class="fas fa-layer-group"></i>Becas y Créditos
+                        </a>
+                        <a href="matricula.html">
+                            <i class="fas fa-layer-group"></i>Matricula
+                        </a>
+                    </div>
+                </li>
+                <!-- Menú desplegable INFRAESTRUCTURA -->
+                <li class="dropdown">
+                    <a href="infraestructura/infraestructura.html">Infraestructura</a>
+                </li>
+                <!-- Menú desplegable RECURSOS -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" onclick="toggleDropdown(this)">Recursos</a>
+                    <div class="dropdown-content">
+                        <a href="aula-virtual.html"><i class="fas fa-chalkboard-teacher"></i> Aula Virtual</a>
+                        <a href="biblioteca-virtual.html"><i class="fas fa-book"></i> Biblioteca Virtual</a>
+                        <a href="plan-estudios.html"><i class="fas fa-cogs"></i> Plan de Estudios</a>
+                    </div>
+                </li>
+                <!-- Menú desplegable CONTACTOS -->
+                <li class="dropdown">
+                    <a href="contactos.html">Contactos</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <!-- Breadcrumb -->
+        <section class="breadcrumb" data-aos="fade-down">
+            <div class="container">
+                <nav>
+                    <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
+                    <span class="separator">/</span>
+                    <a href="#">Admisión y Matriculas</a>
+                    <span class="separator">/</span>
+                    <span class="current">Admisiones 2026</span>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Hero Section -->
+        <section class="hero-page" data-aos="fade-up">
+            <div class="container">
+                <div class="hero-content">
+                    <h1><i class="fas fa-user-graduate"></i>Admisiones 2026</h1>
+                    <p>Infórmate sobre el proceso de admisión a la carrera de Diseño y Programación Web</p>
+                </div>
+            </div>
+        </section>
+
+        </section>
+        <div class="container">
+            <div class="section">
+                <h2>¿Qué es la Admisión 2026?</h2>
+                <p>
+                    La Admisión 2026 es el proceso mediante el cual los estudiantes acceden a una vacante de uno de los
+                    Programas de estudios que oferta el IESTP Público "HUANTA". Este proceso se realiza bajo estrictos
+                    procedimientos establecidos en las normas educativas vigentes.
+                </p>
+                <p>
+                    En nuestra institución, la convocatoria se realiza una vez por año, con la posibilidad de efectuar
+                    hasta dos convocatorias anuales, siempre que se cuente con la capacidad de infraestructura y
+                    presupuesto necesarios.
+                </p>
+                <p>
+                    Las vacantes son asignadas según lo establecido en la resolución de aprobación emitida por la
+                    Dirección Regional de Educación de Ayacucho (DREA), considerando las condiciones de infraestructura
+                    y presupuesto que garanticen una adecuada prestación del servicio educativo.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>Requisitos de Admisión</h2>
+                <p>Para la inscripción, los postulantes deben presentar los siguientes documentos:</p>
+
+                <div class="requirements">
+                    <ul>
+                        <li>a) Copia simple del DNI</li>
+                        <li>b) Certificado de estudios secundarios</li>
+                        <li>c) Recibo de pago por derecho de inscripción</li>
+                    </ul>
+                </div>
+
+                <p><strong>Nota importante:</strong> En caso de que el postulante solicite exoneración, deberá presentar
+                    el documento que acredite la condición de exonerado.</p>
+            </div>
+
+            <div class="section">
+                <h2>Costos de Inscripción 2026</h2>
+                <table class="cost-table">
+                    <thead>
+                        <tr>
+                            <th>Concepto</th>
+                            <th>Monto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Derecho de Inscripción para examen de Postulantes Ordinarios</td>
+                            <td>S/. 210.00</td>
+                        </tr>
+                        <tr>
+                            <td>Postulantes de Ley del Servicio Militar (activo)</td>
+                            <td>S/. 105.00</td>
+                        </tr>
+                        <tr>
+                            <td>Exonerados por primer puesto de educación secundaria</td>
+                            <td>S/. 240.00</td>
+                        </tr>
+                        <tr>
+                            <td>Exonerados por poseer Títulos y/o grados de nivel Universitario y Superior</td>
+                            <td>S/. 290.00</td>
+                        </tr>
+                        <tr>
+                            <td>Exonerados por deportista calificado que hayan representado a nivel regional</td>
+                            <td>S/. 260.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section">
+                <h2>Modalidades de Exoneración</h2>
+                <p>Pueden acceder a exoneración del examen de admisión los siguientes postulantes:</p>
+
+                <div class="requirements">
+                    <ul>
+                        <li>Los Primeros puestos de la educación básica en cualquiera de sus modalidades</li>
+                        <li>Deportistas calificados, acreditados por el Instituto Peruano del Deporte</li>
+                        <li>Las personas víctimas del terrorismo, con acreditación comprobada</li>
+                        <li>Postulantes con convenios institucionales previamente establecidos</li>
+                    </ul>
+                </div>
+
+                <div class="highlight">
+                    <h3>Criterios Importantes</h3>
+                    <p>• La nota mínima aprobatoria para alcanzar una vacante es <strong>11 (Once)</strong></p>
+                    <p>• En caso de que los postulantes por exoneración excedan las vacantes ofertadas, se procederá a
+                        la evaluación de expedientes</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Características del Examen de Admisión</h2>
+                <div class="exam-info">
+                    <h3>Especificaciones Técnicas</h3>
+                    <p><strong>Tipo de prueba:</strong> Objetiva y de alternativa múltiple (a, b, c, d, e)</p>
+                    <p><strong>Número de preguntas:</strong> 60 preguntas</p>
+                    <p><strong>Duración:</strong> 120 minutos</p>
+                </div>
+
+                <h3>Áreas de Evaluación</h3>
+                <div class="requirements">
+                    <ul>
+                        <li>Comprensión lectora</li>
+                        <li>Razonamiento lógico matemático</li>
+                        <li>Conocimientos específicos necesarios para la especialidad</li>
+                        <li>Cultura general</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Programas de Estudio Disponibles</h2>
+                <div class="programs-grid">
+                    <div class="program-card">
+                        <h4>Enfermería Técnica</h4>
+                        <p>Formación integral en cuidados de enfermería y atención sanitaria</p>
+                    </div>
+                    <div class="program-card">
+                        <h4>Diseño y Programación Web</h4>
+                        <p>Desarrollo de competencias en tecnologías web y diseño digital</p>
+                    </div>
+                    <div class="program-card">
+                        <h4>Mecatrónica Automotriz</h4>
+                        <p>Especialización en sistemas mecánicos y electrónicos automotrices</p>
+                    </div>
+                    <div class="program-card">
+                        <h4>Industrias de Alimentos y Bebidas</h4>
+                        <p>Procesamiento y control de calidad en la industria alimentaria</p>
+                    </div>
+                    <div class="program-card">
+                        <h4>Producción Agropecuaria</h4>
+                        <p>Técnicas modernas de producción agrícola y ganadera</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Cuadro de Vacantes 2026</h2>
+                <table class="vacancies-table">
+                    <thead>
+                        <tr>
+                            <th>Programas de Estudio</th>
+                            <th>Total Vacantes</th>
+                            <th>Primeros Puestos</th>
+                            <th>Grado/Título</th>
+                            <th>Deportista</th>
+                            <th>Reincorporación</th>
+                            <th>Víctima Violencia</th>
+                            <th>Discapacitados</th>
+                            <th>Convenio</th>
+                            <th>Examen</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Enfermería Técnica</td>
+                            <td>30</td>
+                            <td>01</td>
+                            <td>01</td>
+                            <td>01</td>
+                            <td>01</td>
+                            <td>01</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>22</td>
+                        </tr>
+                        <tr>
+                            <td>Diseño y Programación Web</td>
+                            <td>30</td>
+                            <td>01</td>
+                            <td>01</td>
+                            <td>01</td>
+                            <td>07</td>
+                            <td>01</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>16</td>
+                        </tr>
+                        <tr>
+                            <td>Mecatrónica Automotriz</td>
+                            <td>30</td>
+                            <td>01</td>
+                            <td>01</td>
+                            <td>01</td>
+                            <td>03</td>
+                            <td>01</td>
+                            <td>01</td>
+                            <td>03</td>
+                            <td>19</td>
+                        </tr>
+                        <tr>
+                            <td>Industrias de Alimentos y Bebidas</td>
+                            <td>30</td>
+                            <td>02</td>
+                            <td>01</td>
+                            <td>01</td>
+                            <td>03</td>
+                            <td>02</td>
+                            <td>01</td>
+                            <td>03</td>
+                            <td>17</td>
+                        </tr>
+                        <tr>
+                            <td>Producción Agropecuaria</td>
+                            <td>30</td>
+                            <td>02</td>
+                            <td>01</td>
+                            <td>01</td>
+                            <td>04</td>
+                            <td>02</td>
+                            <td>01</td>
+                            <td>03</td>
+                            <td>16</td>
+                        </tr>
+                        <tr style="background: #f8f9fa; font-weight: bold;">
+                            <td>TOTAL</td>
+                            <td>150</td>
+                            <td>7</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>18</td>
+                            <td>7</td>
+                            <td>5</td>
+                            <td>13</td>
+                            <td>90</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section">
+                <h2>Cronograma del Proceso de Admisión 2026</h2>
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Actividad</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Convocatoria Examen de Admisión 2026, en todos los Programas de Estudios</td>
+                            <td>Del 20 de Enero al 4 de Abril del 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Inscripción de postulantes Examen de Admisión Ordinario 2026</td>
+                            <td>Del 20 de Enero al 4 de Abril del 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Inscripción de postulantes Exonerados por diferentes modalidades</td>
+                            <td>Del 20 de Enero al 14 de Marzo del 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Evaluación de expedientes exonerados por diferentes modalidades</td>
+                            <td>20 de Marzo del 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Publicación resultados exonerados por diferentes modalidades</td>
+                            <td>20 de Marzo del 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Publicación de Postulantes Aptos Examen de Admisión 2026</td>
+                            <td>4 de Abril del 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Examen de Admisión 2026</td>
+                            <td>6 de Abril del 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Publicación de resultados y orden de méritos por programas</td>
+                            <td>6 de Abril del 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Matrícula de Estudiantes Ingresantes 2026</td>
+                            <td>Del 17 de Marzo al 24 de Abril del 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Inicio de Clases del Período Lectivo 2026-I</td>
+                            <td>7 de Abril del 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Finalización del Período Lectivo 2026-I</td>
+                            <td>25 de Julio del 2026</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section">
+                <div class="highlight">
+                    <h3>¡Importante!</h3>
+                    <p>Todos los postulantes deben mantenerse atentos a las publicaciones oficiales y cumplir
+                        estrictamente con los plazos establecidos. La institución no se responsabiliza por inscripciones
+                        fuera de fecha.</p>
+                    <p>Para mayor información, contactar a la Oficina de Admisión del IESTP Público "HUANTA".</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-logo" data-aos="fade-right">
+            <img src="img/logo-footer.png" alt="Logo" />
+            <p>La carrera de Diseño y Programación Web forma profesionales capaces de desarrollar soluciones
+                tecnológicas con
+                creatividad y eficiencia.</p>
+        </div>
+        <div class="footer-links" data-aos="fade-left">
+            <div>
+                <h4>Redes Sociales</h4>
+                <p>
+                    <a href="#"><i class="fab fa-facebook"></i> Facebook</a><br />
+                    <a href="#"><i class="fab fa-instagram"></i> Instagram</a><br />
+                    <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+                </p>
+            </div>
+            <div>
+                <h4>Información</h4>
+                <p>IESTP Huanta<br />Diseño y Programación Web<br />Web oficial: <a
+                        href="https://iestphuanta.edu.pe">iestphuanta.edu.pe</a></p>
+            </div>
+            <div>
+                <h4>Horario de atención</h4>
+                <p>Lunes a Viernes<br />08:00 a.m. - 01:00 p.m.<br />03:00 p.m. - 06:00 p.m.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Botón flotante WhatsApp -->
+    <a href="https://wa.me/51987654321?text=Hola%2C%20me%20interesa%20obtener%20información%20sobre%20la%20carrera%20de%20Diseño%20y%20Programación%20Web%20del%20IESTP%20Huanta"
+        class="whatsapp-float" target="_blank" title="Contáctanos por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <!-- AOS Init -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+        // Funciones para el menú desplegable
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuToggle = document.querySelector('.menu-toggle');
+            mobileMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        }
+        function toggleDropdown(element) {
+            const dropdown = element.parentElement;
+            dropdown.classList.toggle('active');
+        }
+        // Cerrar menú móvil al hacer click en un enlace
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                if (!this.classList.contains('dropdown-toggle')) {
+                    const mobileMenu = document.getElementById('mobileMenu');
+                    const menuToggle = document.querySelector('.menu-toggle');
+                    mobileMenu.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                }
+            });
+        });
+        // Smooth scrolling para los enlaces
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
