@@ -24,7 +24,7 @@ body {
 }
 
 /* ===========================================
-   HEADER PRINCIPAL
+  HEADER PRINCIPAL
    ========================================== */
 header {
   display: flex;
@@ -59,7 +59,7 @@ header {
 }
 
 /* ===========================================
-   NAVEGACIÓN PRINCIPAL
+  NAVEGACIÓN PRINCIPAL
    ========================================== */
 nav {
   display: flex;
@@ -104,7 +104,7 @@ nav ul li a i {
 }
 
 /* ===========================================
-   MENÚ DESPLEGABLE (DROPDOWN)
+  MENÚ DESPLEGABLE (DROPDOWN)
    ========================================== */
 .dropdown {
   position: relative;
@@ -194,7 +194,7 @@ nav ul li a i {
 }
 
 /* ===========================================
-   MENÚ MÓVIL HAMBURGUESA
+  MENÚ MÓVIL HAMBURGUESA
    ========================================== */
 .menu-toggle {
   display: none;
@@ -299,17 +299,17 @@ nav ul li a i {
 }
 
 /* ===========================================
-   RESPONSIVE DESIGN
+  RESPONSIVE DESIGN
    ========================================== */
 @media (max-width: 1024px) {
   header {
     padding: 0.8rem 1.5rem;
   }
-  
+
   nav ul {
     gap: 1rem;
   }
-  
+
   nav ul li a {
     padding: 0.4rem 0.8rem;
     font-size: 0.9rem;
@@ -336,7 +336,7 @@ nav ul li a i {
   .logo img {
     height: 40px;
   }
-  
+
   /* Ajustar mobile menu */
   .mobile-menu {
     left: 0;
@@ -349,11 +349,11 @@ nav ul li a i {
   header {
     padding: 0.8rem;
   }
-  
+
   .logo img {
     height: 35px;
   }
-  
+
   .menu-toggle span {
     width: 20px;
     height: 2px;
@@ -367,12 +367,16 @@ nav ul li a i {
 /* Slider mejorado - pegado al header y bordes */
 .slider {
   position: relative;
-  width: 100vw; /* Ancho completo de la ventana */
+  width: 100vw;
+  /* Ancho completo de la ventana */
   max-height: 500px;
   overflow: hidden;
-  margin: 0; /* Eliminar márgenes */
-  padding: 0; /* Eliminar padding */
-  margin-left: calc(-50vw + 50%); /* Centrar y extender a los bordes */
+  margin: 0;
+  /* Eliminar márgenes */
+  padding: 0;
+  /* Eliminar padding */
+  margin-left: calc(-50vw + 50%);
+  /* Centrar y extender a los bordes */
 }
 
 .slide {
@@ -398,38 +402,54 @@ nav ul li a i {
   height: auto;
   object-fit: cover;
   max-height: 500px;
-  display: block; /* Eliminar espacio debajo de la imagen */
+  display: block;
+  /* Eliminar espacio debajo de la imagen */
 }
 
 .caption {
   position: absolute;
   bottom: 20px;
   left: 50%;
-  transform: translateX(-50%); /* Centrar horizontalmente */
-  font-size: 2.2rem; /* Tamaño más grande */
-  background: rgba(0, 0, 0, 0.7); /* Fondo más oscuro */
-  padding: 1rem 2rem; /* Más padding */
-  border-radius: 12px; /* Bordes más redondeados */
+  transform: translateX(-50%);
+  /* Centrar horizontalmente */
+  font-size: 2.2rem;
+  /* Tamaño más grande */
+  background: rgba(0, 0, 0, 0.7);
+  /* Fondo más oscuro */
+  padding: 1rem 2rem;
+  /* Más padding */
+  border-radius: 12px;
+  /* Bordes más redondeados */
   color: white;
-  font-weight: 700; /* Más bold */
-  text-align: center; /* Centrar texto */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra al texto */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra al contenedor */
-  backdrop-filter: blur(5px); /* Efecto de desenfoque */
-  border: 2px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
-  min-width: 300px; /* Ancho mínimo */
-  max-width: 80%; /* Ancho máximo */
+  font-weight: 700;
+  /* Más bold */
+  text-align: center;
+  /* Centrar texto */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  /* Sombra al texto */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  /* Sombra al contenedor */
+  backdrop-filter: blur(5px);
+  /* Efecto de desenfoque */
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  /* Borde sutil */
+  min-width: 300px;
+  /* Ancho mínimo */
+  max-width: 80%;
+  /* Ancho máximo */
 }
 
 /* Asegurar que el contenedor principal no tenga padding */
-.container, main {
+.container,
+main {
   padding-left: 0;
   padding-right: 0;
 }
 
 /* Alternativa si el slider está dentro de un contenedor con padding */
 .slider-container {
-  margin: 0 -20px; /* Ajustar según el padding del contenedor padre */
+  margin: 0 -20px;
+  /* Ajustar según el padding del contenedor padre */
 }
 
 /* Versión alternativa más simple */
@@ -528,7 +548,8 @@ h2 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 1rem;
-  display: inline-block; /* Asegurar que solo afecte al icono */
+  display: inline-block;
+  /* Asegurar que solo afecte al icono */
 }
 
 .beneficios .card h3 {
@@ -659,20 +680,29 @@ footer::before {
 }
 
 @keyframes whatsapp-pulse {
-  0% { 
+  0% {
     box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
   }
-  50% { 
+
+  50% {
     box-shadow: 0 6px 25px rgba(37, 211, 102, 0.7);
   }
-  100% { 
+
+  100% {
     box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
   }
 }
 
 @keyframes fade {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive Design */
@@ -737,11 +767,11 @@ footer::before {
   .slider {
     max-height: 300px;
   }
-  
+
   .slide img {
     max-height: 300px;
   }
-  
+
   .caption {
     font-size: 1.4rem;
     bottom: 15px;
