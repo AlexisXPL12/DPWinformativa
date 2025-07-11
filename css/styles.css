@@ -1,5 +1,4 @@
-/* styles.css actualizado con fondo crema, estilos modernos, animaciones básicas y botón flotante */
-
+/* styles.css - Diseño y Programación Web mejorado */
 @import url('https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap');
 
 :root {
@@ -14,30 +13,35 @@
 
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Segoe UI', sans-serif;
   background-color: var(--crema);
   color: var(--negro);
 }
 
+/* Header mejorado */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0.8rem 2rem;
+  background: linear-gradient(135deg, #111827, #1f2937);
   backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0;
 }
 
 .logo img {
-  height: 50px;
+  height: 45px;
+  filter: brightness(1.1);
 }
 
 nav ul {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -47,19 +51,243 @@ nav ul li a {
   text-decoration: none;
   color: var(--blanco);
   font-weight: 500;
-  transition: color 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
   color: var(--naranja);
+  transform: translateY(-2px);
 }
 
-/* Slider mejorado */
+/* ===========================================
+   ESTILOS PARA MENÚ DESPLEGABLE
+   ========================================== */
+
+/* Contenedor del menú desplegable */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Botón del menú desplegable */
+.dropdown-toggle {
+  text-decoration: none;
+  color: var(--blanco);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Icono de flecha para el dropdown */
+.dropdown-toggle::after {
+  content: "▼";
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+/* Rotar flecha cuando está abierto */
+.dropdown.active .dropdown-toggle::after {
+  transform: rotate(180deg);
+}
+
+/* Hover del botón */
+.dropdown-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--naranja);
+  transform: translateY(-2px);
+}
+
+/* Contenido del menú desplegable */
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: linear-gradient(135deg, #1f2937, #111827);
+  min-width: 200px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1001;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* Mostrar menú desplegable */
+.dropdown:hover .dropdown-content,
+.dropdown.active .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Enlaces del menú desplegable */
+.dropdown-content a {
+  color: var(--blanco);
+  padding: 0.75rem 1.2rem;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  margin: 0.2rem 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Hover de los enlaces */
+.dropdown-content a:hover {
+  background: linear-gradient(135deg, var(--azul), var(--morado));
+  color: var(--blanco);
+  transform: translateX(5px);
+}
+
+/* Separador en el menú desplegable */
+.dropdown-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0.5rem 0;
+}
+
+/* Menú desplegable con iconos */
+.dropdown-content a i {
+  margin-right: 0.5rem;
+  width: 16px;
+  text-align: center;
+}
+
+/* Variante de menú desplegable hacia la derecha */
+.dropdown-right .dropdown-content {
+  left: auto;
+  right: 0;
+}
+
+/* ===========================================
+   MENÚ MÓVIL HAMBURGUESA
+   ========================================== */
+
+/* Botón hamburguesa (oculto por defecto) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  gap: 3px;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: var(--blanco);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Animación del botón hamburguesa */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Menú móvil */
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(135deg, #111827, #1f2937);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  border-radius: 0 0 8px 8px;
+}
+
+.mobile-menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mobile-menu ul {
+  flex-direction: column;
+  gap: 0;
+  padding: 1rem 0;
+}
+
+.mobile-menu ul li {
+  width: 100%;
+}
+
+.mobile-menu ul li a {
+  padding: 0.75rem 2rem;
+  border-radius: 0;
+  display: block;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu ul li:last-child a {
+  border-bottom: none;
+}
+
+/* Dropdown en móvil */
+.mobile-menu .dropdown-content {
+  position: static;
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  box-shadow: none;
+  background: rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 0;
+  margin-left: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.mobile-menu .dropdown.active .dropdown-content {
+  max-height: 300px;
+}
+
+.mobile-menu .dropdown-content a {
+  padding: 0.5rem 2rem;
+  font-size: 0.85rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ===========================================
+   CONTINÚA CON EL RESTO DE ESTILOS ORIGINALES
+   ========================================== */
+
+/* Slider mejorado - pegado al header y bordes */
 .slider {
   position: relative;
-  width: 100%;
+  width: 100vw; /* Ancho completo de la ventana */
   max-height: 500px;
   overflow: hidden;
+  margin: 0; /* Eliminar márgenes */
+  padding: 0; /* Eliminar padding */
+  margin-left: calc(-50vw + 50%); /* Centrar y extender a los bordes */
 }
 
 .slide {
@@ -85,18 +313,48 @@ nav ul li a:hover {
   height: auto;
   object-fit: cover;
   max-height: 500px;
+  display: block; /* Eliminar espacio debajo de la imagen */
 }
 
 .caption {
   position: absolute;
   bottom: 20px;
-  left: 40px;
-  font-size: 1.8rem;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  left: 50%;
+  transform: translateX(-50%); /* Centrar horizontalmente */
+  font-size: 2.2rem; /* Tamaño más grande */
+  background: rgba(0, 0, 0, 0.7); /* Fondo más oscuro */
+  padding: 1rem 2rem; /* Más padding */
+  border-radius: 12px; /* Bordes más redondeados */
   color: white;
-  font-weight: 600;
+  font-weight: 700; /* Más bold */
+  text-align: center; /* Centrar texto */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra al texto */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra al contenedor */
+  backdrop-filter: blur(5px); /* Efecto de desenfoque */
+  border: 2px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
+  min-width: 300px; /* Ancho mínimo */
+  max-width: 80%; /* Ancho máximo */
+}
+
+/* Asegurar que el contenedor principal no tenga padding */
+.container, main {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Alternativa si el slider está dentro de un contenedor con padding */
+.slider-container {
+  margin: 0 -20px; /* Ajustar según el padding del contenedor padre */
+}
+
+/* Versión alternativa más simple */
+.slider-full-width {
+  position: relative;
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .intro-title {
@@ -154,72 +412,217 @@ h2 {
   color: #333;
 }
 
+/* Beneficios mejorados - más compactos */
+.beneficios {
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  padding: 3rem 2rem;
+  margin: 2rem 0;
+}
+
+.beneficios .cards {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.beneficios .card {
+  width: 280px;
+  padding: 1.2rem;
+  background: linear-gradient(135deg, var(--blanco), #f8fafc);
+  border-left: 4px solid var(--azul);
+  transition: all 0.3s ease;
+}
+
+.beneficios .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.beneficios .card i {
+  background: linear-gradient(135deg, var(--azul), var(--morado));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+  display: inline-block; /* Asegurar que solo afecte al icono */
+}
+
+.beneficios .card h3 {
+  color: var(--azul);
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.beneficios .card p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #4a5568;
+}
+
+/* Footer mejorado */
 footer {
-  background-color: #111827;
+  background: linear-gradient(135deg, #111827, #1f2937);
   color: #d1d5db;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 2.5rem 2rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--azul), var(--morado), var(--naranja));
+}
+
+.footer-logo {
+  flex: 1;
+  min-width: 300px;
+  margin-bottom: 1rem;
 }
 
 .footer-logo img {
-  height: 60px;
-  margin-bottom: 0.5rem;
+  height: 55px;
+  margin-bottom: 0.8rem;
+  filter: brightness(1.2);
+}
+
+.footer-logo p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #9ca3af;
+  max-width: 350px;
 }
 
 .footer-links {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
   flex-wrap: wrap;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.footer-links div {
+  min-width: 150px;
 }
 
 .footer-links div h4 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
   color: var(--blanco);
+  font-size: 1.1rem;
+  position: relative;
+}
+
+.footer-links div h4::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: var(--naranja);
 }
 
 .footer-links a {
   color: #d1d5db;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
   color: var(--naranja);
 }
 
-/* Botón flotante WhatsApp */
+.footer-links i {
+  margin-right: 0.5rem;
+}
+
+/* Botón flotante WhatsApp mejorado */
 .whatsapp-float {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25d366;
+  bottom: 25px;
+  right: 25px;
+  background: linear-gradient(135deg, #25d366, #128c7e);
   color: white;
   border-radius: 50%;
-  width: 55px;
-  height: 55px;
+  width: 60px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 28px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  font-size: 30px;
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
   z-index: 1000;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
+  animation: whatsapp-pulse 2s infinite;
+  text-decoration: none;
 }
 
 .whatsapp-float:hover {
-  background-color: #1ebe57;
+  background: linear-gradient(135deg, #128c7e, #25d366);
+  transform: scale(1.1);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
 }
 
+.whatsapp-float:active {
+  transform: scale(0.95);
+}
+
+@keyframes whatsapp-pulse {
+  0% { 
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+  }
+  50% { 
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.7);
+  }
+  100% { 
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+  }
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  nav ul {
+  header {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  /* Mostrar botón hamburguesa en móvil */
+  .menu-toggle {
+    display: flex;
+    order: 1;
+  }
+
+  /* Ocultar menú principal en móvil */
+  nav ul {
+    display: none;
+  }
+
+  /* Mostrar menú móvil */
+  .mobile-menu {
+    order: 2;
+    width: 100%;
   }
 
   .cards {
     flex-direction: column;
     align-items: center;
+  }
+
+  .beneficios .card {
+    width: 100%;
+    max-width: 350px;
   }
 
   footer {
@@ -229,5 +632,46 @@ footer {
 
   .footer-links {
     justify-content: center;
+    gap: 2rem;
+  }
+
+  .footer-logo {
+    min-width: auto;
+    margin-bottom: 2rem;
+  }
+
+  .whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    font-size: 26px;
+  }
+
+  /* Slider responsive */
+  .slider {
+    max-height: 300px;
+  }
+  
+  .slide img {
+    max-height: 300px;
+  }
+  
+  .caption {
+    font-size: 1.4rem;
+    bottom: 15px;
+    padding: 0.75rem 1.5rem;
+    min-width: 250px;
+    max-width: 90%;
+  }
+}
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .caption {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    min-width: 200px;
+    max-width: 95%;
   }
 }

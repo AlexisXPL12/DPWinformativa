@@ -10,28 +10,135 @@
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script src="js/scripts.js" defer></script>
 </head>
+
 <body>
   <header>
     <div class="logo">
-      <img src="img/logo.png" alt="Logo Institucional" data-aos="fade-down" />
+      <a href="index.html">
+        <img src="img/logo.png" alt="Logo Institucional" data-aos="fade-down" />
+      </a>
     </div>
+
+    <!-- Botón hamburguesa para móvil -->
+    <button class="menu-toggle" onclick="toggleMobileMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
     <nav data-aos="fade-left">
       <ul>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#academico">Académico</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#recursos">Recursos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-        <li><a href="#mas">Más</a></li>
+        <!-- Menú desplegable NOSOTROS -->
+        <li class="dropdown">
+          <a href="#nosotros" class="dropdown-toggle"><i class="fa-solid fa-chalkboard-user"></i>Nosotros</a>
+          <div class="dropdown-content">
+            <a href="presentacion.html"><i class="fa-solid fa-chalkboard"></i>Presentación de la Carrera</a>
+            <a href="#mision-vision"><i class="fa-solid fa-briefcase"></i>Campo Laboral</a>
+            <a href="#historia"><i class="fas fa-users"></i>Plana Docente</a>
+        </li>
+
+        <!-- Menú desplegable ACADÉMICO -->
+        <li class="dropdown">
+          <a href="#academico" class="dropdown-toggle"><i class="fa-solid fa-graduation-cap"></i>Académico</a>
+          <div class="dropdown-content">
+            <a href="modulos1.html"><i class="fas fa-layer-group"></i>Módulos I</a>
+            <a href="modulos2.html"><i class="fas fa-layer-group"></i>Módulos II</a>
+            <a href="modulos3.html"><i class="fas fa-layer-group"></i>Módulos III</a>
+            <a href="plan-estudios.html"><i class="fas fa-book-open"></i>Plan de Estudios</a>
+            <a href="perfil-profesional.html"><i class="fas fa-user-graduate"></i>Perfil Profesional</a>
+            <a href="horario"><i class="fas fa-calendar"></i>Cronograma</a>
+        </li>
+
+        <li class="dropdown">
+          <a href="infraestructura.html" class="dropdown-toggle"><i class="fas fa-building"></i>Infraestructura</a>
+          <div class="dropdown-content">
+            <a href="laboratorios"><i class="fas fa-laptop-code"></i>Laboratorios</a>
+            <a href="materiales"><i class="fas fa-tools"></i>Materiales</a>
+          </div>
+        </li>
+
+        <!-- Menú desplegable RECURSOS -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle"><i class="fa-solid fa-book-open"></i>Recursos</a>
+          <div class="dropdown-content">
+            <a href="aula-virtual.html"><i class="fas fa-chalkboard-teacher"></i>Aula Virtual</a>
+            <a href="biblioteca-virtual.html"><i class="fas fa-book"></i>Biblioteca</a>
+            <a href="sispa"><i class="fas fa-cogs"></i>SISPA</a>
+        </li>
+
+        <li><a class="dropdown-toggle" href="contactos.html"><i class="fa-solid fa-address-card"></i>Contacto</a></li>
+
+        <!-- Menú desplegable MÁS -->
+        <li class="dropdown dropdown-right">
+          <a href="#mas" class="dropdown-toggle"><i class="fa-solid fa-notes-medical"></i>Más</a>
+          <div class="dropdown-content">
+            <a href="eventos"><i class="fas fa-calendar-alt"></i>Eventos</a>
+            <a href="noticias"><i class="fas fa-newspaper"></i>Noticias</a>
+            <a href="galeria"><i class="fas fa-images"></i>Galería</a>
+            <div class="dropdown-divider"></div>
+            <a href="convenios"><i class="fas fa-handshake"></i>Convenios</a>
+          </div>
+        </li>
       </ul>
     </nav>
+
+
+    <!-- Menú móvil -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <!-- Menú desplegable NOSOTROS -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Nosotros</a>
+          <div class="dropdown-content">
+            <a href="presentacion-carrera.html"><i class="fas fa-presentation"></i>Presentación de la Carrera</a>
+            <a href="campo-laboral.html"><i class="fas fa-eye"></i>Campo Laboral</a>
+            <a href="plana-docente.html"><i class="fas fa-users"></i>Plana Docente</a>
+          </div>
+        </li>
+
+        <!-- Menú desplegable ACADÉMICO -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Académico</a>
+          <div class="dropdown-content">
+            <a href="modulos-profesionales.html"><i class="fas fa-book-open"></i>Módulos
+              Profesionales</a>
+            <a href="/perfil-profesional.html"><i class="fas fa-user-graduate"></i>Perfil
+              Profesional</a>
+            <a href="/horario-clases.html"><i class="fas fa-calendar"></i>Horario de
+              Clases</a>
+          </div>
+        </li>
+
+        <!-- Menú desplegable INFRAESTRUCTURA -->
+        <li class="dropdown">
+          <a href="infraestructura/infraestructura.html">Infraestructura</a>
+        </li>
+
+        <!-- Menú desplegable RECURSOS -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Recursos</a>
+          <div class="dropdown-content">
+            <a href="aula-virtual.html"><i class="fas fa-chalkboard-teacher"></i>Aula
+              Virtual</a>
+            <a href="biblioteca-virtual.html"><i class="fas fa-book"></i>Biblioteca
+              Virtual</a>
+            <a href="plan-estudios.html"><i class="fas fa-cogs"></i>Plan de Estudios</a>
+          </div>
+        </li>
+
+        <!-- Menú desplegable CONTACTOS -->
+        <li class="dropdown">
+          <a href="contactos.html">Contactos</a>
+        </li>
+      </ul>
+    </div>
   </header>
 
   <main>
     <!-- Slider de inicio -->
     <section class="slider">
       <div class="slide active">
-        <img src="img/slider1.jpg" alt="Slide 1" data-aos="fade-right" />
+        <img src="img/slider1.png" alt="Slide 1" data-aos="fade-right" />
         <div class="caption" data-aos="fade-left">Bienvenido a la carrera de Diseño y Programación Web</div>
       </div>
       <div class="slide">
@@ -55,29 +162,33 @@
         <div class="card" data-aos="zoom-in">
           <i class="fas fa-file-alt fa-3x"></i>
           <h3>Plan de Estudios</h3>
-          <p>Nuestro plan curricular está orientado a formar profesionales integrales, con sólidos conocimientos en desarrollo web, bases de datos, UX/UI y servicios digitales.</p>
+          <p>Nuestro plan curricular está orientado a formar profesionales integrales, con sólidos conocimientos en
+            desarrollo web, bases de datos, UX/UI y servicios digitales.</p>
         </div>
         <div class="card" data-aos="zoom-in">
           <i class="fas fa-user-graduate fa-3x"></i>
           <h3>Perfil Profesional</h3>
-          <p>El egresado será capaz de diseñar, desarrollar y gestionar soluciones web, liderar equipos de trabajo y adaptarse a las tecnologías emergentes.</p>
+          <p>El egresado será capaz de diseñar, desarrollar y gestionar soluciones web, liderar equipos de trabajo y
+            adaptarse a las tecnologías emergentes.</p>
         </div>
         <div class="card" data-aos="zoom-in">
           <i class="fas fa-briefcase fa-3x"></i>
           <h3>Campo Laboral</h3>
-          <p>Los profesionales pueden desempeñarse en empresas de tecnología, instituciones educativas, emprendimientos propios o como freelancers.</p>
+          <p>Los profesionales pueden desempeñarse en empresas de tecnología, instituciones educativas, emprendimientos
+            propios o como freelancers.</p>
         </div>
       </div>
     </section>
 
     <!-- Módulos Profesionales -->
-    <section class="modulos">
+    <section class="modulos" id="modulos">
       <h2 data-aos="fade-up">Módulos Profesionales</h2>
       <div class="cards">
         <div class="card" data-aos="flip-left">
           <i class="fas fa-diagram-project fa-3x"></i>
           <h3>Módulo I</h3>
-          <p>En este módulo se abordan los fundamentos de análisis y diseño de sistemas informáticos orientados a la web.</p>
+          <p>En este módulo se abordan los fundamentos de análisis y diseño de sistemas informáticos orientados a la
+            web.</p>
         </div>
         <div class="card" data-aos="flip-left">
           <i class="fas fa-code fa-3x"></i>
@@ -87,7 +198,8 @@
         <div class="card" data-aos="flip-left">
           <i class="fas fa-network-wired fa-3x"></i>
           <h3>Módulo III</h3>
-          <p>El estudiante aprende a diseñar servicios web, gestionar APIs, y conectar sistemas en la nube o servidores.</p>
+          <p>El estudiante aprende a diseñar servicios web, gestionar APIs, y conectar sistemas en la nube o servidores.
+          </p>
         </div>
       </div>
     </section>
@@ -97,19 +209,19 @@
       <h2 data-aos="fade-up">Beneficios y Recursos</h2>
       <div class="cards">
         <div class="card" data-aos="zoom-in-up">
-          <i class="fas fa-chalkboard-teacher fa-3x"></i>
+          <i class="fas fa-chalkboard-teacher fa-2x"></i>
           <h3>Aula Virtual</h3>
-          <p>Contamos con una moderna aula virtual donde los estudiantes acceden a clases, materiales, foros y evaluaciones desde cualquier lugar.</p>
+          <p>Moderna aula virtual con clases, materiales y evaluaciones accesibles 24/7.</p>
         </div>
         <div class="card" data-aos="zoom-in-up">
-          <i class="fas fa-book fa-3x"></i>
+          <i class="fas fa-book fa-2x"></i>
           <h3>Biblioteca</h3>
-          <p>Nuestra biblioteca presencial está equipada con libros actualizados y también disponemos de una plataforma de biblioteca virtual accesible 24/7.</p>
+          <p>Biblioteca presencial y virtual con recursos actualizados disponibles siempre.</p>
         </div>
         <div class="card" data-aos="zoom-in-up">
-          <i class="fas fa-cogs fa-3x"></i>
+          <i class="fas fa-cogs fa-2x"></i>
           <h3>SISPA</h3>
-          <p>SISPA es el sistema académico del instituto donde se gestiona la matrícula, calificaciones, información docente y seguimiento del estudiante.</p>
+          <p>Sistema académico para gestión de matrícula, calificaciones y seguimiento estudiantil.</p>
         </div>
       </div>
     </section>
@@ -117,8 +229,13 @@
 
   <footer>
     <div class="footer-logo" data-aos="fade-right">
-      <img src="img/logo-footer.png" alt="Logo" />
-      <p>La carrera de Diseño y Programación Web forma profesionales capaces de desarrollar soluciones tecnológicas con creatividad y eficiencia.</p>
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo.png" alt="Logo Institucional" data-aos="fade-down" />
+        </a>
+      </div>
+      <p>La carrera de Diseño y Programación Web forma profesionales capaces de desarrollar soluciones tecnológicas con
+        creatividad y eficiencia.</p>
     </div>
     <div class="footer-links" data-aos="fade-left">
       <div>
@@ -131,7 +248,8 @@
       </div>
       <div>
         <h4>Información</h4>
-        <p>IESTP Huanta<br />Diseño y Programación Web<br />Web oficial: <a href="https://iestphuanta.edu.pe">iestphuanta.edu.pe</a></p>
+        <p>IESTP Huanta<br />Diseño y Programación Web<br />Web oficial: <a
+            href="https://iestphuanta.edu.pe">iestphuanta.edu.pe</a></p>
       </div>
       <div>
         <h4>Horario de atención</h4>
@@ -141,7 +259,8 @@
   </footer>
 
   <!-- Botón flotante WhatsApp -->
-  <a href="https://wa.me/51987654321" class="whatsapp-float" target="_blank">
+  <a href="https://wa.me/51987654321?text=Hola%2C%20me%20interesa%20obtener%20información%20sobre%20la%20carrera%20de%20Diseño%20y%20Programación%20Web%20del%20IESTP%20Huanta"
+    class="whatsapp-float" target="_blank" title="Contáctanos por WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
@@ -152,6 +271,48 @@
       duration: 1000,
       once: true
     });
+
+    // Funciones para el menú desplegable
+    function toggleMobileMenu() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      const menuToggle = document.querySelector('.menu-toggle');
+
+      mobileMenu.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+    }
+
+    function toggleDropdown(element) {
+      const dropdown = element.parentElement;
+      dropdown.classList.toggle('active');
+    }
+
+    // Cerrar menú móvil al hacer click en un enlace
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+      link.addEventListener('click', function (e) {
+        if (!this.classList.contains('dropdown-toggle')) {
+          const mobileMenu = document.getElementById('mobileMenu');
+          const menuToggle = document.querySelector('.menu-toggle');
+
+          mobileMenu.classList.remove('active');
+          menuToggle.classList.remove('active');
+        }
+      });
+    });
+
+    // Smooth scrolling para los enlaces
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
   </script>
 </body>
+
 </html>
