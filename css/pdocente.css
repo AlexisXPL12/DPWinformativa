@@ -17,7 +17,8 @@
     /* Sombras */
     --sombra-media: 0 4px 12px rgba(0, 0, 0, 0.1);
     --sombra-intensa: 0 8px 24px rgba(0, 0, 0, 0.15);
-}/* Breadcrumb - Estilos mejorados manteniendo simplicidad */
+}
+/* Breadcrumb - Estilos mejorados manteniendo simplicidad */
 .breadcrumb {
     background: linear-gradient(135deg, var(--gris-claro), #e2e8f0);
     padding: 1rem 0;
